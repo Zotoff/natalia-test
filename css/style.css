@@ -33,6 +33,10 @@
      margin: 0;
      padding: 0;
    }
+   html,
+   body {
+   	overflow-x: hidden;
+   }
    label {
      display: block;
    }
@@ -129,11 +133,11 @@
      width: 20px;
      height: 20px;
      cursor: pointer;
-     background: url('/img/icons/sound.svg') no-repeat center center;
+     background: url('../img/icons/sound.svg') no-repeat center center;
      background-size: cover;
    }
    .sound-button--active {
-     background: url('/img/icons/sound-active.svg') no-repeat center center !important;
+     background: url('../img/icons/sound-active.svg') no-repeat center center !important;
      background-size: cover!important;
    }
    .app-panel-control {
@@ -158,15 +162,53 @@
    .app-panel-control a:hover {
      background: #7986cb4a;
    }
+   @media screen and (max-width: 1070px) {
+		.app-panel-control {
+			-webkit-transform: translateX(100%);
+			-ms-transform: translateX(100%);
+			-o-transform: translateX(100%);
+			transform: translateX(100%);
+			-webkit-transition: 0.3s;
+			-o-transition: 0.3s;
+			transition: 0.3s;
+			min-height: 149px;
+		}
+		.app-panel-control.active {
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+			transform: translateX(0);
+		}
+	/*	.app-panel-control {
+			box-shadow: none;
+			background: none;
+		}*/
+		.app-panel-control__title {
+		    position: absolute;
+		    transform: rotate(-90deg);
+		    left: -181px;
+		    transform-origin: top right;
+		    background: #fff;
+		    border-top-right-radius: 12px;
+		    border-top-left-radius: 12px;
+		    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		    cursor: pointer;
+		}
+   }
+   @media screen and (max-width: 991px) {
+		.Tsds-english__lesson {
+			padding-top: 75px;
+		}
+   }   
    @media screen and (max-width: 767px) {
      .Aba-english__course {
        min-width: 100%!important;
      }
      .Tsds-english__lesson__anotation-top,
      .Tsds-english__lesson__anotation-bottom {
-       width: 100% !important;
+       /*width: 100% !important;*/
        margin: 0px auto !important;
-     }
+     }     
    }
    html {
      background-color: #f9f9f9;
@@ -299,7 +341,7 @@
      text-transform: none!important;
    }
    .Tsds-english__lesson {
-     padding-top: 25px;
+     /*padding-top: 25px;*/
      position: relative;
    }
    .Tsds-english__lesson h1 {
@@ -372,6 +414,7 @@
    }
    .Tsds-english__lesson__anotation-top,
    .Tsds-english__lesson__anotation-bottom {
+     max-width: 100%;
      padding: 0px 80px 30px 20px;
      margin: 20px 0;
      position: relative;
@@ -455,15 +498,17 @@
      transition: 0.5s ease;
    }
    .Tsds-english__lesson__indicators {
-     position: absolute;
+     /*position: absolute;
      top: 10px;
-     left: 0;
+     left: 0;*/
      cursor: pointer;
      display: flex;
      justify-content: flex-end;
      align-items: center;
      padding: 0px 5px 0px 25px;
-     width: 100%;
+     max-width: 100%;
+     flex-grow: 1;
+     flex-shrink: 0;
    }
    .Tsds-english__lesson__indicators__info {
      display: flex;
@@ -497,12 +542,18 @@
    }
    .Tsds-english__lesson__sound {
      position: absolute;
-     bottom: 15px;
+     bottom: 5px;
    }
    .Tsds-english__lesson__phrase-sound {
      position: absolute;
-     right: 75px;
-     bottom: 15px;
+     /*right: 75px;*/
+     bottom: 5px;
+   }
+   .Tsds-english__lesson__phrase-sound {
+   	 right: 188px;
+   }
+   .Tsds-english__lesson__sound {
+     left: -60px;
    }
    .Tsds-english__lesson__nav .Tsds-english__lesson__nav__wrapper {
      width: 30px !important;
@@ -513,6 +564,7 @@
      align-items: center;
      justify-content: center;
      box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+     margin-top: 90px;
    }
    .Tsds-english__lesson__nav {
      position: absolute;
@@ -562,7 +614,7 @@
    .Tsds-english__lesson .tooltip__container {
      width: 568px;
      margin: 0px auto;
-     height: 18px;
+     min-height: 18px;
      position: relative;
      display: flex;
      align-items: center;
@@ -755,6 +807,19 @@
    .Tsds__modal--indicators {
      max-width: 600px;
    }
+   .settings__df {
+   	display: -webkit-flex;
+   	display: -moz-flex;
+   	display: -ms-flex;
+   	display: -o-flex;
+   	display: flex;
+   	-ms-align-items: center;
+   	align-items: center;
+   	margin-bottom: 48px;
+   }
+   .settings__wrap {
+   	width: 210px;
+   }
    .indicator {
      width: 25px;
      height: 25px;
@@ -811,7 +876,7 @@
    }
    .lesson-fastwatch__container {
      width: 33%;
-     margin-bottom: 48px;
+     /*margin-bottom: 48px;*/
    }
    .lesson-fastwatch.hidden {
      display: none;
@@ -944,6 +1009,15 @@
      box-shadow: none !important;
      padding: 0px;
      text-transform: initial;
+     text-decoration: none;
+     font-size: 12px;
+     text-align: left;
+     -webkit-transition: 0.3s;
+     -o-transition: 0.3s;
+     transition: 0.3s;
+   }
+   .lesson-fastwatch__btn:hover {
+   	color: #6fc0b3;
    }
    .lesson-fastwatch__btn .indigo.lighten2 {
      background-color: transparent !important;
@@ -958,7 +1032,7 @@
    }
    .fastwatch__block {
      width: 33%;
-     height: 69px;
+     /*height: 69px;*/
      display: flex;
      align-items: center;
      justify-content: flex-start;
@@ -1120,6 +1194,9 @@
      align-items: flex-start;
      justify-content: space-between;
      flex-wrap: wrap;
+   }
+   .Tsds-english__application {
+   	padding-bottom: 40px;
    }
    .Tsds-english__application__courses .col {
      margin-bottom: 60px;
@@ -1350,6 +1427,12 @@
    .Tsds-english__page__title {
      padding-left: 25px !important;
    }
+   .sidenav-user {
+		display: none;
+   }
+   .sidenav-user i {
+		color: #000;
+   }
    @media all and (min-width: 1024px) {
      .Tsds-english__application__filter {
        width: 100%;
@@ -1399,6 +1482,14 @@
      .Tsds-english__application__courses .col {
        width: 49%;
      }
+   }
+   @media all and (max-width: 991px) {
+		.Tsds-english__lesson__nav--prev {
+			left: -27px;
+		}
+		.Tsds-english__lesson__nav--next {
+			right: -27px;
+		}
    }
    @media all and (max-width: 767px) {
      .display--desktop {
@@ -1459,7 +1550,58 @@
      }
      .Tsds-english__header {
        height: 100%;
-     }
+   	 }   	 
+	.Tsds-english__lesson__nav--prev {
+		left: -50px;
+	}
+	.Tsds-english__lesson__nav--next {
+		right: -50px;
+	}
+	.Tsds-english__page-singlecourse {
+		width: 95%;
+	}
+	.Tsds-english__page-singlecourse .Tsds-english__lesson__block {
+		width: 85%;
+	}
+	.authorization-checker {		
+	    transform: translateX(101%);
+	    transition: 0.3s;
+	}
+	.authorization-checker.active {		
+	    transform: translateX(0);	    
+	}
+    .sidenav-user {
+		display: block;
+    	/*position: fixed;
+    	top: 20px;
+    	right: 10px;
+		cursor: pointer;
+		z-index: 50;*/
+    }
+	.Tsds-english__page-singlecourse .Tsds-english__lesson__block {
+		min-height: 0;
+		margin-top: 40px;
+		margin-bottom: 50px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.Tsds-english__lesson__nav {
+		top: 60px;
+	}
+	.Tsds-english__application {
+		padding-bottom: 110px;
+	}
+	.Tsds-english {
+		position: relative;
+	}
+	.Tsds-english__editButton {
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+	}
+	.Tsds-english__lesson__progress {
+		margin-top: 0;
+	}
    }
    @media all and (max-width: 576px) {
      .Tsds-english__page__filter,
@@ -1482,34 +1624,105 @@
        margin-bottom: 30px;
        width: 100%;
      }
-     .Tsds-english__lesson {
+   /*  .Tsds-english__lesson {
        padding-top: 75px;
-     }
+     }*/
      .Tsds-english__lesson__block {
        padding-top: 0px;
        padding-bottom: 0px;
        margin-top: 50px;
      }
      .fastwatch__container {
-       width: 100%;
+       /*width: 100%;*/
        height: auto;
-       flex-wrap: wrap;
-       margin-bottom: 30px;
+       /*flex-wrap: wrap;*/
+       /*margin-bottom: 30px;*/
      }
-     .fastwatch__container .fastwatch__block {
+/*     .fastwatch__container .fastwatch__block {
        width: 100%;
-     }
+     }*/
      .fastwatch__buttons {
-       width: 100%;
-       margin-top: 30px;
+       /*width: 100%;*/
+       /*margin-top: 30px;*/
      }
      .lesson-fastwatch__container {
        width: 100%;
      }
      .Tsds-english__lesson__phrase-sound {
-       right: initial;
-       left: 40px;
+       /*right: initial;*/
+       /*left: 40px;*/
      }
+     .Tsds-english__lesson__words {
+    	font-size: 21px;
+    	line-height: 37px;
+    }
+    .Tsds-english__lesson__words .Tsds-english__lesson__input-container input {
+		height: 2rem;
+    }
+    .Tsds-english__lesson__indicators__info p {
+    	display: none;
+    }
+   }
+   @media all and (max-width: 500px) {
+		.Tsds-english__lesson__nav .Tsds-english__lesson__nav__wrapper {
+			margin-top: -50px;
+		}
+		.Tsds-english__lesson__nav--prev {
+		    left: -40px;
+		}
+		.Tsds-english__lesson__nav--next {
+			right: -40px;
+		}
+		.Tsds-english__lesson__words {
+    		font-size: 17px;
+    		line-height: 29px;
+    	}
+    	.Tsds-english__lesson__words .Tsds-english__lesson__input-container input {
+		    height: 1.3rem;
+		}
+		.Tsds-english__page-singlecourse .Tsds-english__lesson__block {
+			width: 78%;
+		}
+		.settings__df {			
+		    width: calc(100% + 40px);
+		    margin-left: -20px;
+		}
+		.app-tabs__item {
+		    width: 100%;
+		    text-align: left;
+		    border-bottom: 1px solid rgba(0,0,0,0.1);
+		    padding-bottom: 10px;
+		    text-decoration: none;
+		}		
+		.app-tabs__item:last-of-type {
+			border-bottom: none;
+		}
+		.Tsds-english__editButton {
+		    width: 120px;
+		    height: 40px;
+		    font-size: 13px;
+		    line-height: 40px;
+		    bottom: 50px;
+		    right: 10px;
+		}
+		.Tsds-english__page .app-chat:not(.app-chat--fullscreen) {
+		    right: 10px;
+		    bottom: 0;
+		}
+		.Tsds-english__page .app-chat .app-chat__open {
+		    padding: 10px 20px;
+		}
+		.app-panel-control {
+    		min-height: 118px;
+		}
+		.app-panel-control__title {
+			left: -150px;
+		    font-size: 14px;
+		    padding: 5px 7px;
+		}
+		.app-panel-control a {
+			font-size: 13px;
+		}
    }
    @media all and (max-width: 425px) {
      .Tsds-english__page--index h1 {
@@ -1518,6 +1731,12 @@
      .Tsds-english__page__search::after {
        right: 0px;
      }
+   }
+   @media all and (max-width: 400px) {
+		.Tsds-english__lesson__words {
+		    font-size: 15px;
+		    line-height: 26px;
+		}
    }
    @media all and (max-width: 768px) {
      .Tsds-english__header nav .nav-wrapper .container,
@@ -1531,10 +1750,30 @@
        display: none;
      }
      .sidenav-trigger {
-       top: 20px;
+     	position: static;
+     	display: -webkit-flex;
+     	display: -moz-flex;
+     	display: -ms-flex;
+     	display: -o-flex;
+     	display: flex;
+       /*top: 20px;*/
      }
      .sidenav-trigger i {
        color: #000;
+     }
+     .mobile-menu__wrapper {
+     	position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding-top: 20px;
+	    padding: 12px 10px 12px;
+	    background: #FCFAF2;
+	    z-index: 50;
+	    box-shadow: 0 3px 2px rgba(0,0,0,0.02);
      }
    }
    .resetpassword-component__inputs {

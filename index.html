@@ -2,6 +2,7 @@
 
 <head>
     <title>VocabuLearning</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,8 +38,11 @@
                     <ul id="slide-out" class="sidenav">
                         <li><a href="/"><img src="/img/icons/icon-home.svg"></a></li>
                         <li><a href="/auth/"><img src="/img/icons/icon-user.svg"></a></li>
-                    </ul><a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i
-                            class="material-icons">menu</i></a>
+                    </ul>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i
+                            class="material-icons">menu</i></a> 
+                    <a href="#" class="sidenav-user"><i
+                            class="material-icons">person</i></a>
                 </div>
                 <div class="authorization-checker">
                     <div>
@@ -50,7 +54,7 @@
                         <div id="anotation_2375533223_8133556306" class="Tsds-english__lesson__anotation-top open ">
                             <div class="Tsds-english__lesson__anotation__wrapper">
                                 <div class="Tsds-english__lesson__anotation-acordeon acordeon"><img
-                                        src="/img/down-arrow-new.svg" width="20"></div>
+                                        src="img/down-arrow-new.svg" width="20"></div>
                             </div>
                             <div class="Tsds-english__lesson__anotation__tab__wrapper">англ<div
                                     class="tooltip__container">
@@ -96,78 +100,83 @@
                                         </g>
                                     </svg></div>
                             </div>
-                            <div class="Tsds-english__lesson__indicators modal-trigger" data-target="modal-indicators">
-                                <div class="Tsds-english__lesson__indicators__info">
-                                    <p>Это слово нужно подучить!</p><span class="indicator study"></span>
-                                </div>
-                            </div>
-                            <div class="settings-course">
-                                <form><label><input type="checkbox" checked=""><span>Звук Вкл.</span></label></form>
-                            </div>
-                            <div class="fastwatch__container">
-                                <div class="fastwatch__block">
-                                    <div class="lesson-fastwatch hidden">
-                                        <div class="container">
-                                            <h3>Режим быстрого просмотра</h3>
-                                            <div class="row">
-                                                <form action="" class="col m6 s12">
-                                                    <p class=""><label><input type="checkbox"
-                                                                checked=""><span>Показывать перевод</span></label></p>
-                                                    <p class="range-field "><span>Скорость переключения (1.2
-                                                            сек.)</span><input type="range" min="200" max="2000"
-                                                            value="1200"></p>
-                                                    <div class="lesson-fastwatch__range ">Диапазон доступных слов (0 -
-                                                        16)<div id="fast-watch-diapazon"
-                                                            class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
-                                                            <div class="noUi-base">
-                                                                <div class="noUi-connects">
-                                                                    <div class="noUi-connect"
-                                                                        style="transform: translate(0%, 0px) scale(1, 1);">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="noUi-origin"
-                                                                    style="transform: translate(-1000%, 0px); z-index: 5;">
-                                                                    <div class="noUi-handle noUi-handle-lower"
-                                                                        data-handle="0" tabindex="0" role="slider"
-                                                                        aria-orientation="horizontal"
-                                                                        aria-valuemin="0.0" aria-valuemax="16.0"
-                                                                        aria-valuenow="0.0" aria-valuetext="0.00">
-                                                                        <div class="noUi-touch-area"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="noUi-origin"
-                                                                    style="transform: translate(0%, 0px); z-index: 4;">
-                                                                    <div class="noUi-handle noUi-handle-upper"
-                                                                        data-handle="1" tabindex="0" role="slider"
-                                                                        aria-orientation="horizontal"
-                                                                        aria-valuemin="0.0" aria-valuemax="16.0"
-                                                                        aria-valuenow="16.0" aria-valuetext="16.00">
-                                                                        <div class="noUi-touch-area"></div>
+                            <div class="settings__df">
+                                <div class="settings__wrap">
+                                    <div class="settings-course">
+                                        <form><label><input type="checkbox" checked=""><span>Звук Вкл.</span></label></form>
+                                    </div>
+                                    <div class="fastwatch__container">
+                                        <div class="fastwatch__block">
+                                            <div class="lesson-fastwatch hidden">
+                                                <div class="container">
+                                                    <h3>Режим быстрого просмотра</h3>
+                                                    <div class="row">
+                                                        <form action="" class="col m6 s12">
+                                                            <p class=""><label><input type="checkbox"
+                                                                        checked=""><span>Показывать перевод</span></label></p>
+                                                            <p class="range-field "><span>Скорость переключения  (1.2
+                                                                    сек.)</span><input type="range" min="200" max="2000"
+                                                                    value="1200"></p>
+                                                            <div class="lesson-fastwatch__range ">Диапазон доступных слов (0 -
+                                                                16)<div id="fast-watch-diapazon"
+                                                                    class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                                                                    <div class="noUi-base">
+                                                                        <div class="noUi-connects">
+                                                                            <div class="noUi-connect"
+                                                                                style="transform: translate(0%, 0px) scale(1, 1);">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="noUi-origin"
+                                                                            style="transform: translate(-1000%, 0px); z-index: 5;">
+                                                                            <div class="noUi-handle noUi-handle-lower"
+                                                                                data-handle="0" tabindex="0" role="slider"
+                                                                                aria-orientation="horizontal"
+                                                                                aria-valuemin="0.0" aria-valuemax="16.0"
+                                                                                aria-valuenow="0.0" aria-valuetext="0.00">
+                                                                                <div class="noUi-touch-area"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="noUi-origin"
+                                                                            style="transform: translate(0%, 0px); z-index: 4;">
+                                                                            <div class="noUi-handle noUi-handle-upper"
+                                                                                data-handle="1" tabindex="0" role="slider"
+                                                                                aria-orientation="horizontal"
+                                                                                aria-valuemin="0.0" aria-valuemax="16.0"
+                                                                                aria-valuenow="16.0" aria-valuetext="16.00">
+                                                                                <div class="noUi-touch-area"></div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                            <p><button type="button" data-target=""
+                                                                    class=" waves-effect shadow--none waves-light  btn #7986cb indigo lighten-2">Скрыть
+                                                                    настройки</button></p>
+                                                        </form>
                                                     </div>
-                                                    <p><button type="button" data-target=""
-                                                            class=" waves-effect shadow--none waves-light  btn #7986cb indigo lighten-2">Скрыть
-                                                            настройки</button></p>
-                                                </form>
+                                                    <div class="row lesson-fastwatch__slider">
+                                                        <p class="lesson-fastwatch__word">Ttl</p><i class="">ц</i>
+                                                    </div>
+                                                    <div class="lesson-fastwatch__close"></div>
+                                                </div>
                                             </div>
-                                            <div class="row lesson-fastwatch__slider">
-                                                <p class="lesson-fastwatch__word">Ttl</p><i class="">ц</i>
-                                            </div>
-                                            <div class="lesson-fastwatch__close"></div>
+                                            <div class="lesson-fastwatch__container"><button type="button" data-target=""
+                                                    class="lesson-fastwatch__btn waves-effect shadow--none waves-light  btn transparent">Быстрый
+                                                    просмотр</button></div>
+                                        </div>
+                                        <div class="fastwatch__buttons">
+                                            <div class="sound-button Tsds-english__lesson__sound"></div>
+                                            <div class="sound-button Tsds-english__lesson__phrase-sound"></div>
                                         </div>
                                     </div>
-                                    <div class="lesson-fastwatch__container"><button type="button" data-target=""
-                                            class="lesson-fastwatch__btn waves-effect shadow--none waves-light  btn transparent">Быстрый
-                                            просмотр</button></div>
                                 </div>
-                                <div class="fastwatch__buttons">
-                                    <div class="sound-button Tsds-english__lesson__sound"></div>
-                                    <div class="sound-button Tsds-english__lesson__phrase-sound"></div>
+                                <div class="Tsds-english__lesson__indicators modal-trigger" data-target="modal-indicators">
+                                    <div class="Tsds-english__lesson__indicators__info">
+                                        <p>Это слово нужно подучить!</p><span class="indicator study"></span>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="Tsds-english__lesson__words"><span id="input_container_id_450780835333040"
                                     class="Tsds-english__lesson__input-container"><span
                                         class="Tsds-english__lesson__input-container__tooltipbtn"></span><span
@@ -220,11 +229,16 @@
                         <div class="Tsds-english__lesson__progress">
                             <div class="Tsds-english__lesson__progress__bar" data-lesson="0" style="width: 0%;"></div>
                         </div>
-                        <div class="app-panel-control"><span class="app-panel-control__title">Дополнительно:</span><a
-                                href="#modal-tests" class="modal-trigger">Открыть тесты</a><a href="#modal-heads"
-                                class="modal-trigger">Выбрать главу</a><a href="#modal-type-study"
-                                class="modal-trigger">Выбрать тип обучения</a><a href="#modal-book-reader"
-                                class="modal-trigger">Читать книгу</a></div>
+                        <div class="app-panel-control">
+                            <span class="app-panel-control__title">Дополнительно:</span>
+                            <div class="app-panel-control__wrap">
+                                <a
+                                    href="#modal-tests" class="modal-trigger">Открыть тесты</a><a href="#modal-heads"
+                                    class="modal-trigger">Выбрать главу</a><a href="#modal-type-study"
+                                    class="modal-trigger">Выбрать тип обучения</a><a href="#modal-book-reader"
+                                    class="modal-trigger">Читать книгу</a>
+                            </div>
+                        </div>
                         <div id="modal-type-study" draggable="true" class="modal Tsds__modal Tsds__modal--type-study"
                             tabindex="0">
                             <div class="modal-content">
@@ -462,4 +476,18 @@
         </div>
     </main>
     <script src="/js/user"></script>
+    <script>
+        let panelTitle = document.querySelector('.app-panel-control__title');
+        let panelHidden = document.querySelector('.app-panel-control');
+        let btnUser = document.querySelector('.sidenav-user');
+        let panelUser = document.querySelector('.authorization-checker');
+
+        panelTitle.addEventListener("click", function() {
+          panelHidden.classList.toggle("active");
+        });
+        btnUser.addEventListener("click", function() {
+          panelUser.classList.toggle("active");
+        });
+
+    </script>
 </body>
